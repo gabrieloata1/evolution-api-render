@@ -1,10 +1,10 @@
 # Imagem oficial da Evolution API
 FROM evoapicloud/evolution-api:latest
 
-# Variáveis de ambiente necessárias (fixa o erro "Database provider invalid")
+# Variáveis de ambiente necessárias
+# DATABASE_CONNECTION_URI deve ser adicionada no dashboard do Render!
 ENV DATABASE_ENABLED=true
-ENV DATABASE_PROVIDER=sqlite
-ENV DATABASE_CONNECTION_URI="file:./evolution.db"
+ENV DATABASE_PROVIDER=postgresql
 ENV CACHE_REDIS_ENABLED=false
 ENV WEBHOOK_GLOBAL_ENABLED=false
 ENV LOG_LEVEL=error
